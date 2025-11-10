@@ -41,10 +41,3 @@ Generated new business metrics: discount amount, sale price, and profit.
 Identified the impact of discount percentage on overall profit margin.
 
 Cleaned and standardized all Ship Mode entries, removing invalid values.
-
-# How to Run
-1. Clone this repository or download the project files.
-2. Place the dataset file (orders.csv) in the same directory as your script or notebook.
-3. Install required libraries: pip install pandas numpy
-4. Run the script in Jupyter Notebook, VS Code, or any Python IDE.
-5. The processed dataset will display new calculated fields — discount, sale_price, and profit.
