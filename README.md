@@ -1,36 +1,50 @@
 # Sales-Data-Analysis-Profit-Optimization
-Python project for cleaning, transforming, and analyzing sales data to calculate discounts, sale prices, and profits, and to identify operational inefficiencies.
+This project performs a data analysis on retail order transactions to uncover insights related to sales performance, discounts, and profitability across different product categories and regions.
 
-# Technologies-
+The main objective is to clean and transform the dataset, calculate new business metrics, and prepare the data for further reporting or visualization.
 
-Python, Pandas, Jupyter Notebook
+# Dataset & Tools Used
+Dataset:
 
+orders.csv — retail dataset containing details about customer orders, pricing, discounts, and profits.
 
-# Key Steps-
+Tools & Libraries:
 
-Imported and explored the dataset.
+Jupyter Notebook
 
-checked for missing or inconsistent values.
+pandas – data manipulation and cleaning
 
-Standardized column names for easier manipulation.
+numpy – numeric computation
 
-Created calculated columns: discount, sale_price, profit.
+# Workflow
+Load Data: Imported dataset using pandas.read_csv() and displayed the first few records for inspection.
 
-Converted order_date to datetime format for analysis.
+Handle Missing Values: Replaced invalid values such as 'Not Available' and 'unknown' with NaN.
 
-Dropped redundant columns (list_price, cost_price, discount_percent).
+Rename Columns: Standardized column names to lowercase and snake_case format.
 
-Performed exploratory analysis on shipping modes, discounts, and profit patterns.
+Created new columns:
 
+discount = list_price * discount_percent / 100
 
-# Insights & Findings-
+sale_price = list_price - discount
 
-Discounts affect profit margins significantly.
+profit = sale_price - cost_price
 
-Some shipping methods incur higher costs without proportional revenue.
+Data Type Conversion: Converted order_date column to proper datetime format.
 
-Missing or inconsistent shipping data identified for operational attention.
+Optimization: Dropped unnecessary columns (list_price, cost_price, discount_percent).
 
+# Insights
+Generated new business metrics: discount amount, sale price, and profit.
 
-# Conclusion-
-The code provides a framework for analyzing sales data and calculating key financial metrics, useful for business decision-making and profit optimization.
+Identified the impact of discount percentage on overall profit margin.
+
+Cleaned and standardized all Ship Mode entries, removing invalid values.
+
+# How to Run
+1. Clone this repository or download the project files.
+2. Place the dataset file (orders.csv) in the same directory as your script or notebook.
+3. Install required libraries: pip install pandas numpy
+4. Run the script in Jupyter Notebook, VS Code, or any Python IDE.
+5. The processed dataset will display new calculated fields — discount, sale_price, and profit.
